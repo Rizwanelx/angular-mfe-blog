@@ -1,0 +1,5 @@
+{
+  "home": "http://localhost:4210/remoteEntry.json",
+  "posts": "http://localhost:4220/remoteEntry.json",
+  "admin": "http://localhost:4230/remoteEntry.json"
+}

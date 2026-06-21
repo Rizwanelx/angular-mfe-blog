@@ -1,0 +1,33 @@
+const { withNativeFederation, shareAll } = require('@angular-architects/native-federation/config');
+
+// module.exports = withNativeFederation({
+//   name: 'blog-shell',
+
+//   exposes: {
+//     './Component': './src/app/app.ts',
+//   },
+
+//   shared: {
+//     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+//   },
+
+//   skip: [
+//     'rxjs/ajax',
+//     'rxjs/fetch',
+//     'rxjs/testing',
+//     'rxjs/webSocket',
+//     // Add further packages you don't need at runtime
+//   ],
+
+//   // Please read our FAQ about sharing libs:
+//   // https://shorturl.at/jmzH0
+// });
+module.exports = withNativeFederation({
+  name: 'shell',
+
+  remotes: {
+    home: 'http://localhost:4210/remoteEntry.json',
+    posts: 'http://localhost:4220/remoteEntry.json',
+    admin: 'http://localhost:4230/remoteEntry.json'
+  }
+});

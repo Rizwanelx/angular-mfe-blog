@@ -1,0 +1,7 @@
+<h2>Blog List</h2>
+
+@for(blog of blogs; track blog.id){
+  <div class="blog-item" (click)="onNavigateToBlogDetail(blog.id)">
+    {{blog.title}}
+  </div>
+}
